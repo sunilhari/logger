@@ -1,14 +1,9 @@
 import React, {Component} from 'react';
-import {
-  Form,
-  Icon,
-  Input,
-  Button,
-  Row,
-  Col
-} from 'antd';
+import {Form,Icon,Input,Button,Row,Col} from 'antd';
 import './Login.css';
 import Loader from '../Loader/Loader';
+import { connect } from 'react-redux';
+
 const FormItem = Form.Item;
 class Login extends Component {
   constructor() {
