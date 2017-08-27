@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom';
 import NewLog from '../NewLog/NewLog';
 import LogList from '../LogList/LogList';
 class Routes extends Component {

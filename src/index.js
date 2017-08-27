@@ -13,7 +13,7 @@ render((
     <Provider store = {store}>
         <BrowserRouter>
             <div className="container">
-                <App/>
+                <Login/>
             </div>
         </BrowserRouter>
     </Provider>

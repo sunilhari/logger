@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
+import {render} from 'react-dom';
 import {Form,Icon,Input,Button,Row,Col} from 'antd';
 import './Login.css';
 import Loader from '../Loader/Loader';
 import { connect } from 'react-redux';
+import App from '../App/App';
+import {Switch, Route} from 'react-router-dom';
 
 const FormItem = Form.Item;
 class Login extends Component {
@@ -10,9 +13,10 @@ class Login extends Component {
     super();
     this.state = {
       loader: {
-        isVisible: true,
+        isVisible: false,
         message: ""
-      }
+      },
+      loginValid:false
     }
   }
   handleSubmit = (e)=>{
@@ -20,6 +24,7 @@ class Login extends Component {
     this.props.form.validateFields((err,values)=>{
       if(!err){
         console.log('Form Validated');
+        this.state.loginValid = true;
       }
       else{
         
@@ -52,6 +57,10 @@ class Login extends Component {
         }
       }
     };
+    if(this.state.loginValid){
+      return (<App/>);
+    }
+    else{
     return (
       <div className="LoginRoot">
         <Row>
@@ -96,6 +105,7 @@ class Login extends Component {
           message={this.state.loader.message}/>
       </div>
     );
+  }
 
   }
 }

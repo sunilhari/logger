@@ -13,7 +13,7 @@ class AppContent extends Component {
   }
   render() {
     return (
-      <Content className="appContent" style={{marginTop: 80,overflow:'hidden',paddingLeft:'16px',paddingRight:'16px'}}>
+      <Content className="appContent" style={{marginTop: 80,overflow:'auto',paddingLeft:'16px',paddingRight:'16px'}}>
         <Routes/>
       </Content>
     );
