@@ -2,19 +2,22 @@ import React, {Component} from 'react';
 import Main from '../Main/Main';
 import AppHeader from '../AppHeader/AppHeader';
 import AppContent from '../AppContent/AppContent';
-import { Layout } from 'antd';
-const { Header, Footer, Sider, Content } = Layout;
+import SideBar from '../SideBar/SideBar';
+import {Layout} from 'antd';
+const {Header, Footer, Sider, Content} = Layout;
 class App extends Component {
   render() {
     return (
-      <div>
-        <Layout>
-          <AppHeader/>
-          <AppContent/>
+      <Layout className="ant-layout-has-sider" style = {{height:'100%'}}>
+      <SideBar/>
+        <Layout style = {{overflow:'hidden'}}>
+        <AppHeader/>
+        <AppContent/>
         </Layout>
-      </div>
+        </Layout>
     );
   }
 }
+
 
 export default App;

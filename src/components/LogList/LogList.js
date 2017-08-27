@@ -40,9 +40,9 @@ class LogList extends Component {
         const list = this.state.logList;
         return (
             <div>
-           <Row>
+           <Row type="flex" justify="space-around" align="center">
                 {list.map((log,index) => (
-                   <Col span={6} key = {index} style={{padding:'10px'}}>
+                   <Col xl={{ span: 6}} sm={{ span: 6}} md={{ span: 4}} xs={{ span: 21}} lg={{ span: 5}} style={{ marginBottom: 10,marginRight:10 }}key = {index}>
                         <Log title={log.title} content={log.content} isLoading={log.isLoading}/>
                    </Col>
                 ))}
