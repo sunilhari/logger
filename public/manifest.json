@@ -1,6 +1,6 @@
 {
-  "short_name": "PWA",
-  "name": "PWA React",
+  "short_name": "NowLog",
+  "name": "NowLog",
   "icons": [{
     "src": "./icons/icon48.png",
     "sizes": "48x48",
@@ -27,7 +27,7 @@
     "type": "image/png"
   }],
   "start_url": "./index.html",
-  "theme_color": "#d70900",
-  "background_color": "#ffffff",
+  "theme_color": "#212b21",
+  "background_color": "#212b21",
   "display": "standalone"
 }
